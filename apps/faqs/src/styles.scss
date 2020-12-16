@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Oswald';
+  src: url(./assets/fonts/oswald/oswald-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-weight: bold;
+  src: url(./assets/fonts/oswald/oswald-bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: italic;
+  src: url(./assets/fonts/oswald/oswald-light.ttf) format('truetype');
+}
+
+:root {
+  --font-family-regular: 'Oswald', sans-serif;
+  --font-size-body: 16px;
+}
+
+.font-regular {
+  font-family: var(--font-family-regular);
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+.font-light {
+  font-weight: lighter;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+html,
+body {
+  font-family: var(--font-family-regular);
+  font-size: var(--font-size-body);
+  font-weight: normal;
+  height: 100%;
+  margin: auto;
+}

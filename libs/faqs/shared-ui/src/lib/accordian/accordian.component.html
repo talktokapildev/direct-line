@@ -1,0 +1,28 @@
+<hr />
+
+<ng-container *ngFor="let faq of faqs">
+  <div class="faq">
+    <header
+      (click)="onToggle(faq)"
+      class="faq-header"
+      [ngClass]="getHeaderClass(faq)"
+    >
+      <div class="faq-number">Q{{ faq.id }}</div>
+      <div class="faq-question">{{ faq.question }}</div>
+      <div class="faq-plus-icon">
+        <svg class="svg-plus" width="15px" height="15px" viewBox="0 0 357 357">
+          <g id="add">
+            <path
+              class="svg-plus-icon"
+              [ngClass]="getRotateClass(faq)"
+              d="M357,204H204v153h-51V204H0v-51h153V0h51v153h153V204z"
+            />
+          </g>
+        </svg>
+      </div>
+    </header>
+    <div *ngIf="faq?.expanded" class="faq-content">
+      <p>{{ faq.answer }}</p>
+    </div>
+  </div>
+</ng-container>

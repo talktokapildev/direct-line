@@ -114,6 +114,31 @@
           }
         }
       }
+    },
+    "faqs-shared-ui": {
+      "projectType": "library",
+      "root": "libs/faqs/shared-ui",
+      "sourceRoot": "libs/faqs/shared-ui/src",
+      "prefix": "direct-line",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/faqs/shared-ui/src/**/*.ts",
+              "libs/faqs/shared-ui/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/faqs/shared-ui"],
+          "options": {
+            "jestConfig": "libs/faqs/shared-ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

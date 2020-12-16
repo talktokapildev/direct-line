@@ -29,6 +29,9 @@
     "faqs-e2e": {
       "tags": [],
       "implicitDependencies": ["faqs"]
+    },
+    "faqs-shared-ui": {
+      "tags": []
     }
   }
 }
